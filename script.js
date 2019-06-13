@@ -61,7 +61,7 @@ function setSlide(indexOfSlider) {
   setTimeout(changeSlide, 500);
 }
 function hideSlide() {
-  $(".clients-slide-container").fadeOut(500);
+  $(".clients-slide-container").fadeOut(550);
 }
 function changeSlide() {
   number++;

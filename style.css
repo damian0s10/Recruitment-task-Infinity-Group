@@ -266,7 +266,7 @@ a {
 }
 .clients-slide-container {
   max-width: 500px;
-  height: 320px;
+  min-height: 210px;
   padding: 0 5px;
 }
 .clients-slide-content {
@@ -286,14 +286,14 @@ a {
 .clients-slide-text {
   color: #3c3c3c;
   font-weight: 300;
-  font-size: 30px;
-  line-height: 42px;
+  font-size: 24px;
+  line-height: 34px;
   letter-spacing: -0.75px;
 }
 .clients-slide-author {
   margin-top: 10px;
-  font-size: 22px;
-  line-height: 27px;
+  font-size: 18px;
+  line-height: 24px;
   color: #1c1b1b;
   letter-spacing: -0.55px;
 }
@@ -583,7 +583,19 @@ footer {
     padding-top: 150px;
   }
 }
-
+@media (min-width: 830px) {
+  .clients-slide-container {
+    min-height: 320px;
+  }
+  .clients-slide-text {
+    font-size: 30px;
+    line-height: 42px;
+  }
+  .clients-slide-author {
+    font-size: 22px;
+    line-height: 26px;
+  }
+}
 @media (min-width: 900px) {
   .hero-logo-container {
     margin: 0 110px 0 10px;

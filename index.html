@@ -34,13 +34,6 @@
 					<h1>PRAKTYKI <span>INFINITY-GROUP</span></h1>
 				</div>
 			</div>
-			<!-- <div class="hero-cookies">
-				<div class="hero-cookies-container">
-					<img src="img/cookie.png" alt=cookie>
-					<p class="cookies-text">We use own and third party cookies to improve our services and show ads related to your preferences by analyzing your browser habits . If you continue browsing , we consider you accept its use. You can switch the configuration or learn more <a href="#">here</a></p>
-					<button class="hero-cookies-close">CLOSE X</button>
-				</div>
-			</div> -->
 		</div>	
 	</header>
 	<section id="mission" >
@@ -167,15 +160,24 @@
 			<p class="contact-text">
 				Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, <b>totam rem aperiam</b> , eaque ipsa quae ab illo <b>inventore veritatis et </b>quasi architecto beatae vitae.
 			</p>
-			<form>
-				<label class="label-input"> Hello! I'm <input name="name" type="text" placeholder=" Your Name" required></label>
-				<label class="label-input"> and I represent <input name="company" type="text" placeholder=" Company name" required></label>.<br/>
-				<label class="label-input"> Call me at <input name="phone" type="tel" placeholder=" Your telephone number"  required></label>
-				<label class="label-input"> or send an email to <input name="email"type="email" placeholder=" Your email adress" required></label>.
+			<form id="form" name="form" action="" method="post">
+				<label for="name" class="label-input"> Hello! I'm </label>
+				<input name="name" type="text" placeholder=" Your Name" required>
+				
+				<label for="company" class="label-input"> and I represent </label>
+				<input name="company" type="text" placeholder=" Company name" required>.<br/>
+				
+				<label for="phone"class="label-input"> Call me at </label>
+				<input name="phone" type="tel" placeholder=" Your telephone number"  required>
+				
+				<label for="email" class="label-input"> or send an email to </label>
+				<input name="email"type="email" placeholder=" Your email adress" required>.
+				
 				<div class="checkbox-container">
-					<input name="acces" type="checkbox" required>
-					<label class="label-checkbox">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor </label><br/>
+					<input name="checkbox" type="checkbox" required>
+					<label for="checkbox" class="label-checkbox">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor </label><br/>
 				</div>
+
 				<div class="button-submit">
 					<button type="submit">send details &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp → </button>
 				</div>
