@@ -1,4 +1,5 @@
 <!DOCTYPE HTML>
+<html lang="pl">
 <head>
 	<meta charset="utf-8" />
 	<title>PRAKTYKI</title>
@@ -8,7 +9,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Homenaje|Mada:300&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 </head>
-<body >
+<body>
 	<header class="hero">
 		<div class="hero-img">
 			<div class="hero-container">
@@ -33,13 +34,13 @@
 					<h1>PRAKTYKI <span>INFINITY-GROUP</span></h1>
 				</div>
 			</div>
-			<div class="hero-cookies">
+			<!-- <div class="hero-cookies">
 				<div class="hero-cookies-container">
 					<img src="img/cookie.png" alt=cookie>
 					<p class="cookies-text">We use own and third party cookies to improve our services and show ads related to your preferences by analyzing your browser habits . If you continue browsing , we consider you accept its use. You can switch the configuration or learn more <a href="#">here</a></p>
 					<button class="hero-cookies-close">CLOSE X</button>
 				</div>
-			</div>
+			</div> -->
 		</div>	
 	</header>
 	<section id="mission" >
@@ -53,68 +54,14 @@
 		<h2>Clients</h2>
 		<div class="clients-container">
 			<img class="clients-phone" src='img/phone.png' alt="phone">
-			<div class="clients-slider">
-				<div id='slide1' class="clients-slide slide-active">
-					<img src="img/mark.png" alt="quotation-mark">
-					<div class='clients-slide-content'>
-						<p class='clients-slide-text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-						<p class='clients-slide-author'> Project Manager / <a href='https://www.infinity-group.pl/' target='_blank'>Infinity-group.pl</a></p>
-						<div class='clients-slide-features' >
-							<div class='clients-slide-feature'>
-								<p>web design</p>
-							</div>
-							<div class='clients-slide-feature'>
-								<p>usability</p>
-							</div>
-							<div class='clients-slide-feature'>
-								<p>e-commerce</p>
-							</div>
-						</div>
-					</div>
-				</div>
-
-
-				<div id='slide2' class="clients-slide">
-						<img src="img/mark.png" alt="quotation-mark">
-						<div class='clients-slide-content'>
-							<p class='clients-slide-text'>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-							<p class='clients-slide-author'> Frontend Developer / <a href='https://www.infinity-group.pl/' target='_blank'>Infinity-group.pl</a></p>
-							<div class='clients-slide-features' >
-								<div class='clients-slide-feature'>
-									<p>web design</p>
-								</div>
-								<div class='clients-slide-feature'>
-									<p>usability</p>
-								</div>
-							</div>
-						</div>
-				</div>
-
-
-				<div id='slide3' class="clients-slide">
-						<img src="img/mark.png" alt="quotation-mark">
-						<div class='clients-slide-content'>
-							<p class='clients-slide-text'>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-							<p class='clients-slide-author'> Backend Developer / <a href='https://www.infinity-group.pl/' target='_blank'>Infinity-group.pl</a></p>
-							<div class='clients-slide-features' >
-								<div class='clients-slide-feature'>
-									<p>web design</p>
-								</div>
-								<div class='clients-slide-feature'>
-									<p>usability</p>
-								</div>
-								<div class='clients-slide-feature'>
-									<p>e-commerce</p>
-								</div>
-							</div>
-						</div>
-				</div>
+			<div class="clients-content">
+				<div class="clients-slide-container"></div>	
+				<div class="clients-slider-dots">
+					<div onclick="setSlide(1)" class="clients-slider-dot"></div>
+					<div onclick="setSlide(2)"class="clients-slider-dot"></div>
+					<div onclick="setSlide(3)"class="clients-slider-dot"></div>
+				</div>	
 			</div>
-		</div>
-		<div class="clients-slider-dots">
-			<div id="slide1" class="clients-slider-dot dot-active"></div>
-			<div id="slide2" class="clients-slider-dot"></div>
-			<div id="slide3" class="clients-slider-dot"></div>
 		</div>		
 	</section>
 	<section id="products">
@@ -197,17 +144,20 @@
 	</section>
 	<section class='map'>
 		<div class='map-container'>
-			<img src="img/map_comp.png" alt="compas">
-			<div class='map-location'>
-				<p style="font-weight: 700">Infinity Group Sp. z o.o.</p></br>
-				<p>ul. Skladowa 12, </br>
-					15-399 Bialystok, </br>
-					Polska.</p></br>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-			</div>
-
+				<div class='map-company'>
+					<img class="map-compas" src="img/map_comp.png" alt="compas">
+					<div class='map-location'>
+						<p style="font-weight: 700">Infinity Group Sp. z o.o.</p></br>
+						<p>ul. Skladowa 12, </br>
+							15-399 Bialystok, </br>
+							Polska.</p></br>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+					</div>
+				</div>
+				<div class="map-europe"></div>		
 		</div>
 	</section>
+	
 	<section id="contact">
 		<div class="contact-container">
 			<div class="contact-header">
@@ -238,8 +188,13 @@
 			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.</p>
 		</div>
 	</footer>
-
-
+	<section class="cookies">
+			<div class="cookies-container">
+				<img src="img/cookie.png" alt=cookies>
+				<p class="cookies-text">We use own and third party cookies to improve our services and show ads related to your preferences by analyzing your browser habits . If you continue browsing , we consider you accept its use. You can switch the configuration or learn more <a href="#">here</a></p>
+				<button class="cookies-close">CLOSE X</button>
+			</div>
+	</section>
 
 
 
