@@ -100,7 +100,7 @@ function changeSlide() {
 }
 changeSlide();
 
-// show/hide descrobsion of products
+// show/hide describsion of products
 function showDescribtion() {
   products.removeClass("img-active");
   productsText.removeClass("product-under-active");
