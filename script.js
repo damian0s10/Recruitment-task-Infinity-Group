@@ -54,11 +54,13 @@ let timer1 = 0;
 let timer2 = 0;
 
 function setSlide(indexOfSlider) {
-  clearTimeout(timer1);
-  clearTimeout(timer2);
-  number = indexOfSlider - 1;
-  hideSlide();
-  setTimeout(changeSlide, 500);
+  if (indexOfSlider !== number) {
+    clearTimeout(timer1);
+    clearTimeout(timer2);
+    number = indexOfSlider - 1;
+    hideSlide();
+    setTimeout(changeSlide, 500);
+  }
 }
 function hideSlide() {
   $(".clients-slide-container").fadeOut(560);
