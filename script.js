@@ -52,27 +52,30 @@ const data = [
 let number = 0;
 let timer1 = 0;
 let timer2 = 0;
-
+let changed = true;
 function setSlide(indexOfSlider) {
-  if (indexOfSlider !== number) {
+  if (indexOfSlider !== number && changed) {
+    console.log("robi");
     clearTimeout(timer1);
     clearTimeout(timer2);
     number = indexOfSlider - 1;
+    changed = false;
     hideSlide();
     setTimeout(changeSlide, 500);
   }
 }
 function hideSlide() {
+  changed = false;
   $(".clients-slide-container").fadeOut(560);
 }
 function changeSlide() {
   number++;
   if (number > 3) number = 1;
-  let index = number - 1;
+  const index = number - 1;
   const dots = $(".clients-slider-dot");
   dots.removeClass("dot-active");
   $(dots[index]).addClass("dot-active");
-  let html = `<div class="clients-slider">
+  const html = `<div class="clients-slider">
                     <div id='${data[index].id}' class="clients-slide">
                       <img src="${data[index].img}" alt="${data[index].alt}">
                       <div class='clients-slide-content'>
@@ -96,6 +99,7 @@ function changeSlide() {
 
   document.querySelector(".clients-slide-container").innerHTML = html;
   $(".clients-slide-container").fadeIn(500);
+  setTimeout(() => (changed = true), 500);
 
   timer1 = setTimeout(changeSlide, 5000);
   timer2 = setTimeout(hideSlide, 4500);
