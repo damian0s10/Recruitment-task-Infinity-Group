@@ -55,11 +55,9 @@ let timer2 = 0;
 let changed = true;
 function setSlide(indexOfSlider) {
   if (indexOfSlider !== number && changed) {
-    console.log("robi");
     clearTimeout(timer1);
     clearTimeout(timer2);
     number = indexOfSlider - 1;
-    changed = false;
     hideSlide();
     setTimeout(changeSlide, 500);
   }
