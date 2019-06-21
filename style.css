@@ -117,14 +117,44 @@ a {
   -ms-flex-pack: justify;
   justify-content: space-between;
 }
-.hero-menu i {
+.hero-menu .menu-icon {
   display: block;
-  color: white;
-  font-size: 40px;
+  width: 50px;
+  height: 50px;
   position: relative;
   z-index: 100;
   margin-right: 50px;
 }
+.menu-icon .line {
+  position: absolute;
+  height: 6px;
+  width: 100%;
+  background: #fff;
+  border-radius: 6px;
+  transition: all cubic-bezier(0.3, 0.1, 0.3, 1.5) 0.4s;
+}
+.menu-icon.close .line {
+  background: #000;
+}
+.menu-icon .top {
+  top: 18%;
+}
+.menu-icon .middle {
+  top: 48%;
+}
+.menu-icon .bottom {
+  top: 78%;
+}
+.menu-icon.close .top {
+  transform: rotate(45deg);
+  top: 48%;
+}
+.menu-icon.close .middle,
+.menu-icon.close .bottom {
+  transform: rotate(-45deg);
+  top: 48%;
+}
+
 .hero-logo-container {
   text-align: center;
   margin-left: 50px;
@@ -144,47 +174,14 @@ a {
   position: absolute;
   padding: 75px 0 0 0;
   top: 0;
-  right: 0;
-  background-image: -webkit-gradient(
-    linear,
-    left top,
-    right bottom,
-    from(#070707),
-    color-stop(#242323),
-    color-stop(#3e3d3d),
-    color-stop(#5a5857),
-    to(#767674)
-  );
-  background-image: -webkit-linear-gradient(
-    left top,
-    #070707,
-    #242323,
-    #3e3d3d,
-    #5a5857,
-    #767674
-  );
-  background-image: -o-linear-gradient(
-    left top,
-    #070707,
-    #242323,
-    #3e3d3d,
-    #5a5857,
-    #767674
-  );
-  background-image: linear-gradient(
-    to right bottom,
-    #070707,
-    #242323,
-    #3e3d3d,
-    #5a5857,
-    #767674
-  );
-
+  width: 100%;
+  height: 100%;
+  background: #f7f8f9;
+  opacity: 0.95;
   margin: 0;
 }
 .hero-menu-item {
-  width: 200px;
-  height: 54px;
+  padding: 4% 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -198,6 +195,10 @@ a {
 }
 .hero-menu-item:last-child {
   border-right: none;
+}
+.hero-menu-item a {
+  color: black;
+  font-size: 30px;
 }
 .hero-menu-item a:hover {
   text-decoration: underline;
@@ -573,6 +574,7 @@ a {
 }
 .contact-button a span {
   font-size: 14px;
+  padding-left: 10px;
 }
 .contact-text {
   max-width: 760px;
@@ -645,6 +647,9 @@ a {
   text-align: center;
 }
 
+.button-submit span {
+  padding-left: 20px;
+}
 /* footer */
 footer {
   background-color: #242424;
@@ -665,6 +670,9 @@ footer {
 @media (orientation: landscape) {
   .hero-title {
     margin: 100px auto 0 auto;
+  }
+  .hero-menu-item {
+    padding: 2% 0;
   }
 }
 @media (min-width: 580px) {
@@ -725,7 +733,7 @@ footer {
     -ms-flex-pack: left;
     justify-content: left;
   }
-  .hero-menu i {
+  .hero-menu .menu-icon {
     display: none;
   }
   .hero-menu-items {
@@ -741,11 +749,13 @@ footer {
     padding: 0;
     background: none;
     position: relative;
+    opacity: 1;
   }
   .hero-menu-item {
     width: 140px;
     height: 54px;
     border-right: 1px solid white;
+    padding: 0;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -759,6 +769,10 @@ footer {
   }
   .hero-menu-item:last-child {
     border-right: none;
+  }
+  .hero-menu-item a {
+    color: white;
+    font-size: 22px;
   }
   .hero-menu-item a:hover {
     text-decoration: underline;

@@ -61,7 +61,7 @@ function setSlide(indexOfSlider) {
   setTimeout(changeSlide, 500);
 }
 function hideSlide() {
-  $(".clients-slide-container").fadeOut(550);
+  $(".clients-slide-container").fadeOut(600);
 }
 function changeSlide() {
   number++;
@@ -121,6 +121,7 @@ const products = $(".product-img");
 products.mouseenter(showDescribtion);
 
 // toggle menu
-$(".fa-bars").click(function() {
-  $(".hero-menu-items").slideToggle();
+$(".menu-icon").click(function() {
+  $(this).toggleClass("close");
+  $(".hero-menu-items").slideToggle("slow");
 });
