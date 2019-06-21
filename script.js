@@ -12,11 +12,22 @@ function scroll(e) {
 }
 $('.hero-menu-items li a[href^="#"]').click(scroll);
 
-//close cookies
+// cookies
 function closeCookies() {
-  $(".cookies").addClass("cookies-disabled");
+  $(".cookies").remove();
 }
-$(".cookies-close").click(closeCookies);
+
+$(function() {
+  const htmlCookies = `<section class="cookies">
+<div class="cookies-container">
+  <img src="img/cookie.png" alt=cookies>
+  <p class="cookies-text">We use own and third party cookies to improve our services and show ads related to your preferences by analyzing your browser habits . If you continue browsing , we consider you accept its use. You can switch the configuration or learn more <a href="#">here</a></p>
+  <button onclick="closeCookies()" class="cookies-close">CLOSE X</button>
+</div>
+</section>`;
+
+  $("body").append(htmlCookies);
+});
 
 //slider
 

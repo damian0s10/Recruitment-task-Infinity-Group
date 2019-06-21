@@ -229,9 +229,6 @@ a {
   width: 100%;
   z-index: 100;
 }
-.cookies-disabled {
-  display: none;
-}
 .cookies-container {
   max-width: 1200px;
   margin-left: auto;
